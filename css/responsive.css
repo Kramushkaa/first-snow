@@ -102,15 +102,6 @@
         margin-bottom: var(--spacing-xl);
     }
     
-    /* Hero секция */
-    .hero__stats {
-        flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-    
-    .hero__stat-number {
-        font-size: var(--font-size-xl);
-    }
     
     /* Event sections */
     .event-content {
@@ -212,23 +203,6 @@
         font-size: 5rem;
     }
     
-    .hero__stats {
-        flex-direction: row;
-        justify-content: center;
-        gap: var(--spacing-sm);
-    }
-    
-    .hero__stat {
-        padding: var(--spacing-xs);
-    }
-    
-    .hero__stat-number {
-        font-size: var(--font-size-lg);
-    }
-    
-    .hero__stat-label {
-        font-size: 0.7rem;
-    }
 }
 
 /* Landscape mobile fixes */
