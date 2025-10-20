@@ -95,6 +95,8 @@
     .event-lecture,
     .event-music,
     .event-cover,
+    .gallery,
+    .partners,
     .contacts {
         padding: var(--spacing-2xl) 0;
     }
@@ -145,6 +147,28 @@
     .event-date {
         align-items: center;
         text-align: center;
+    }
+    
+    /* Gallery и Partners секции */
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery__item--large,
+    .gallery__item--wide {
+        grid-column: span 1;
+        aspect-ratio: 1;
+    }
+    
+    .partners__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Hero CTA */
+    .hero__cta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
     }
     
     /* Contacts секция */
@@ -215,6 +239,16 @@
     
     .question-mark {
         font-size: 5rem;
+    }
+    
+    .gallery__icon {
+        font-size: 2rem;
+    }
+    
+    .partner__logo {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-lg);
     }
     
     .contacts__form {
