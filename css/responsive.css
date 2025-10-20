@@ -1,0 +1,310 @@
+/* Responsive Design - Адаптивная верстка */
+
+/* Tablet styles (768px - 1024px) */
+@media (max-width: 1024px) {
+    .nav__container {
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+    
+    .nav__menu {
+        gap: var(--spacing-md);
+    }
+    
+    .hero__content {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero__visual {
+        display: none;
+    }
+    
+    .about__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .about__stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .events__grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .contacts__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+/* Mobile styles (до 768px) */
+@media (max-width: 768px) {
+    /* Уменьшаем отступы контейнера */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Header адаптация */
+    .nav__container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+    
+    .nav__menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav__link {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Hero секция */
+    .hero__container {
+        padding: 0 var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hero__description {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Секции */
+    .about,
+    .event-opening,
+    .event-quiz,
+    .event-lecture,
+    .event-music,
+    .event-cover,
+    .contacts {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section__title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* About секция */
+    .about__stats {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .stat {
+        padding: var(--spacing-md);
+    }
+    
+    .stat__number {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* Event sections */
+    .event-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .event-asymmetric {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-asymmetric .event-visual {
+        order: 0;
+    }
+    
+    .event-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .event-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .event-date {
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Contacts секция */
+    .contacts__form {
+        padding: var(--spacing-md);
+    }
+    
+    .social__links {
+        justify-content: center;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+/* Small mobile styles (до 480px) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.25rem;
+        --spacing-xl: 1.5rem;
+        --spacing-2xl: 2rem;
+        --spacing-3xl: 3rem;
+    }
+    
+    .nav__logo h1 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .nav__menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav__link {
+        padding: var(--spacing-xs) 0;
+        text-align: center;
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .section__title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .event-content {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .event-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .laser-effects,
+    .gradient-visual,
+    .cover-visuals {
+        height: 250px;
+    }
+    
+    .question-mark {
+        font-size: 5rem;
+    }
+    
+    .contacts__form {
+        padding: var(--spacing-sm);
+    }
+    
+    .form__button {
+        width: 100%;
+    }
+}
+
+/* Landscape mobile fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .nav__container {
+        flex-direction: row;
+    }
+    
+    .nav__menu {
+        flex-direction: row;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .hero,
+    .footer {
+        display: none;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .section__title {
+        color: #000;
+        page-break-after: avoid;
+    }
+    
+    .event__card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .contacts__form {
+        display: none;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .snowflake {
+        animation: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Темная тема может быть добавлена здесь при необходимости */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #0066CC;
+        --color-text: #000000;
+        --color-text-light: #333333;
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav__link::after,
+    .section__title::after {
+        height: 4px;
+    }
+}
