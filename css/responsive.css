@@ -89,15 +89,11 @@
     }
     
     /* Секции */
-    .about,
     .event-opening,
     .event-quiz,
     .event-lecture,
     .event-music,
-    .event-cover,
-    .gallery,
-    .partners,
-    .contacts {
+    .event-cover {
         padding: var(--spacing-2xl) 0;
     }
     
@@ -106,18 +102,14 @@
         margin-bottom: var(--spacing-xl);
     }
     
-    /* About секция */
-    .about__stats {
+    /* Hero секция */
+    .hero__stats {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
     
-    .stat {
-        padding: var(--spacing-md);
-    }
-    
-    .stat__number {
-        font-size: var(--font-size-2xl);
+    .hero__stat-number {
+        font-size: var(--font-size-xl);
     }
     
     /* Event sections */
@@ -149,31 +141,10 @@
         text-align: center;
     }
     
-    /* Gallery и Partners секции */
-    .gallery__grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery__item--large,
-    .gallery__item--wide {
-        grid-column: span 1;
-        aspect-ratio: 1;
-    }
-    
-    .partners__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-    
     /* Hero CTA */
     .hero__cta {
         flex-direction: column;
         gap: var(--spacing-sm);
-    }
-    
-    /* Contacts секция */
-    .contacts__form {
-        padding: var(--spacing-md);
     }
     
     .social__links {
@@ -241,22 +212,22 @@
         font-size: 5rem;
     }
     
-    .gallery__icon {
-        font-size: 2rem;
+    .hero__stats {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-sm);
     }
     
-    .partner__logo {
-        width: 60px;
-        height: 60px;
+    .hero__stat {
+        padding: var(--spacing-xs);
+    }
+    
+    .hero__stat-number {
         font-size: var(--font-size-lg);
     }
     
-    .contacts__form {
-        padding: var(--spacing-sm);
-    }
-    
-    .form__button {
-        width: 100%;
+    .hero__stat-label {
+        font-size: 0.7rem;
     }
 }
 
@@ -302,10 +273,6 @@
     a {
         color: #000;
         text-decoration: underline;
-    }
-    
-    .contacts__form {
-        display: none;
     }
 }
 
